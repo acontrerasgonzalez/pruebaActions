@@ -4,4 +4,4 @@ on:
     branches: ["main"]
 jobs:
   call-workflow:
-    uses: acontrerasgonzalez/pruebaActions/.github/workflows/reusable.yaml
+    uses: acontrerasgonzalez/pruebaActions/.github/workflows/reusable.yaml@latest
