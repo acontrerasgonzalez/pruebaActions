@@ -20,6 +20,9 @@ jobs:
         id: output
         run: echo "hola"
 
+      - name: Debug Node.js version
+        run: node --version
+
       - name: Debug test
         run: ls -l javascript/tests
         
