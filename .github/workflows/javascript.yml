@@ -26,4 +26,4 @@ jobs:
         run: chmod +x javascript/tests/sum.test.js
       - name: test    
         id: test
-        run: javascript/src/sum.test.js
+        run: javascript/test/sum.test.js
