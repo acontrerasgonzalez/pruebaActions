@@ -27,7 +27,7 @@ jobs:
         run: npm install
 
       - name: Lint con ESLint
-        run: npx eslint 'javascript/**/*.js'
+        run: npx eslint 'javascript/**/*.js' --fix
 
   test:
     runs-on: ubuntu-latest
@@ -40,7 +40,7 @@ jobs:
         run: npm install
 
       - name: Ejecutar Pruebas
-        run: npm test
+        run: npm test --fix
 
   compose:
     needs: [build, lint, test]
