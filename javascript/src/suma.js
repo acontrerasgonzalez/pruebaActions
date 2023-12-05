@@ -1,4 +1,4 @@
 var uno = 1;
 var dos = 2;
-var tres = parseInt(2)+parseInt(1);
+var tres = parseInt(dos)+parseInt(uno);
 console.log(tres);
