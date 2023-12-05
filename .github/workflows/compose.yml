@@ -40,7 +40,7 @@ jobs:
         run: npm install
 
       - name: Ejecutar Pruebas
-        run: npm test --fix
+        run: npm test fix
 
   compose:
     needs: [build, lint, test]
