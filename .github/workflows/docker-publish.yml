@@ -75,5 +75,6 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v5
         with:
-          push: true
-          tags: user/app:latest
+         push: true
+         tags: user/app:latest
+         file: .github/workflows/Dockerfile  # Ajusta la ruta según sea necesario
