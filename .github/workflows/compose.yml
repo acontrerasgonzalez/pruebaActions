@@ -40,7 +40,7 @@ jobs:
         run: npm install | npm install --save-dev jest@latest | npm install --save-dev jest | npm install yargs@latest | npm install jest@latest
 
       - name: Ejecutar Pruebas
-        run: npm audit | npm audit fix
+        run: npm audit | npm audit fix --force
 
   compose:
     needs: [build, lint, test]
