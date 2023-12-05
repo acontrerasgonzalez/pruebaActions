@@ -86,4 +86,3 @@ jobs:
          push: true
          tags: adribwoy/app:latest
          file: .github/workflows/Dockerfile  # Ajusta la ruta según sea necesario
-         needs: Login
