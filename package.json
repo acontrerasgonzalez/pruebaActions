@@ -5,7 +5,8 @@
   "scripts": {
     "lint": "eslint **/*.js",
     "test": "jest",
-    "test:watch": "npm test -- --watch"
+    "test:watch": "npm test -- --watch",
+    "test": "jest"
   },
   "author": {
     "name": "AsturiasHacking",
