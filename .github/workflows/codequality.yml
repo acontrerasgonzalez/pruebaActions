@@ -21,5 +21,8 @@ jobs:
       - name: Install Dependencies
         run: npm install | npm install @typescript-eslint/eslint-plugin --save-dev
 
+      - name: Configure EsLint
+        run: npx eslint --init
+
       - name: Run ESLint
-        run: npm init @eslint/config
+        run: npm run lint
