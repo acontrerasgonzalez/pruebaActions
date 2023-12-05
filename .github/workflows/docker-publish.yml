@@ -39,7 +39,7 @@ jobs:
 
       - name: Check for Dockerfile
         run: |
-          if [ ! -f "Dockerfile" ]; then
+          if [ ! -f ".github/workflows/Dockerfile" ]; then
             echo "Error: Dockerfile not found in the repository."
             exit 1
           fi
