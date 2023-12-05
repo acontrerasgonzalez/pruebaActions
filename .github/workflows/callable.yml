@@ -1,0 +1,7 @@
+name: Call a reusable workflow
+on:
+  push:
+    branches: ["main"]
+jobs:
+  call-workflow:
+    uses: acontrerasgonzalez/pruebaActions/.github/workflows/reusable.yaml@main
