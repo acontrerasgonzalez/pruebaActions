@@ -1,0 +1,54 @@
+name: Ejemplo de Composición
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repositorio
+        uses: actions/checkout@v2
+
+      - name: Instalar Dependencias
+        run: npm install
+
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repositorio
+        uses: actions/checkout@v2
+
+      - name: Instalar Dependencias
+        run: npm install
+
+      - name: Lint con ESLint
+        run: npx eslint 'javascript/**/*.js'
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repositorio
+        uses: actions/checkout@v2
+
+      - name: Instalar Dependencias
+        run: npm install
+
+      - name: Ejecutar Pruebas
+        run: npm test
+
+  compose:
+    needs: [build, lint, test]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repositorio
+        uses: actions/checkout@v2
+
+      - name: Despliegue de Composición
+        run: echo "Composición completada"
