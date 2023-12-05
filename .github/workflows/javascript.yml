@@ -17,4 +17,4 @@ jobs:
           milliseconds: 1000
       - name: Print Output    
         id: output
-        run: javascript/src/sum.js
+        run: echo "hola"
