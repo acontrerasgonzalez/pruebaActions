@@ -25,4 +25,4 @@ jobs:
         run: npm init @eslint/config
 
       - name: Fix with ESLint
-        run: npx eslint javascript/** --fix
+        run: npx eslint "javascript/**/*.js" --fix
