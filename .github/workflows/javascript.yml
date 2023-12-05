@@ -30,7 +30,7 @@ jobs:
         run: chmod +x javascript/tests/sum.test.js
 
       - name: Ensure execute permission on sum file
-        run: chmod +x javascript/tests/sum.js
+        run: chmod +x javascript/src/sum.js
 
       - name: Run tests
         run: javascript/tests/sum.test.js
