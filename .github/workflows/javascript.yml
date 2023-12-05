@@ -21,7 +21,9 @@ jobs:
       - name: Debug
         run: |
           pwd
-          ls -l javascript/tests/sum.test.js
+          ls -l javascript/tests/sum.test.jsç
+      - name: Ensure execute permission on test file
+        run: chmod +x javascript/tests/sum.test.js
       - name: test    
         id: test
         run: javascript/src/suma.js
