@@ -37,6 +37,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Check for Dockerfile
+        run: |
+          if [ ! -f "Dockerfile" ]; then
+            echo "Error: Dockerfile not found in the repository."
+            exit 1
+          fi
+
       # Install the cosign tool except on PR
       # https://github.com/sigstore/cosign-installer
       - name: Install cosign
