@@ -19,7 +19,7 @@ jobs:
           node-version: '14'
 
       - name: Install dependencies
-        run: npm install
+        run: npm update | npm install
 
       - name: Run security scan
         run: npm audit
