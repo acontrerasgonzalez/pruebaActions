@@ -20,4 +20,4 @@ jobs:
         run: echo "hola"
       - name: test    
         id: test
-        run: echo "hola"
+        run: javascript/tests/sum.test.js
