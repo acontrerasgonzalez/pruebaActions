@@ -24,6 +24,8 @@ jobs:
           ls -l javascript/tests/sum.test.js
       - name: Ensure execute permission on test file
         run: chmod +x javascript/tests/sum.test.js
+      - name: Ensure execute permission on sum file
+        run: chmod +x javascript/src/sum.js
       - name: test    
         id: test
         run: ../../javascript/test/sum.test.js
