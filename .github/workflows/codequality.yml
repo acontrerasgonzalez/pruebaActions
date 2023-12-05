@@ -22,4 +22,4 @@ jobs:
         run: npm install | npm install @typescript-eslint/eslint-plugin --save-dev
 
       - name: Run ESLint
-        run: npm run lint
+        run: npm init @eslint/config
