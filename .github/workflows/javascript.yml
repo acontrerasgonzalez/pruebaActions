@@ -1,5 +1,4 @@
 name: javascript
-run-name: Accion de javascript
 on: [push]
 
 jobs:
@@ -7,25 +6,31 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-      - name: Checkout    
-        id: checkout    
+      - name: Checkout
+        id: checkout
         uses: actions/checkout@v4
-      - name: Run my Action    
-        id: run-action    
-        uses: actions/javascript-action@v1 # Commit with the `v1` tag    
+
+      - name: Run my Action
+        id: run-action
+        uses: actions/javascript-action@v1
         with:
           milliseconds: 1000
-      - name: Print Output    
+
+      - name: Print Output
         id: output
         run: echo "hola"
-      - name: Debug
-        run: |
-          pwd
-          ls -l javascript/tests/sum.test.js
+
+      - name: Debug test
+        run: ls -l javascript/tests
+        
+      - name: Debug src
+        run: ls -l javascript/src
+
       - name: Ensure execute permission on test file
         run: chmod +x javascript/tests/sum.test.js
+
       - name: Ensure execute permission on sum file
-        run: chmod +x javascript/src/sum.js
-      - name: test    
-        id: test
-        run: javascript/test/sum.test.js
+        run: chmod +x javascript/tests/sum.js
+
+      - name: Run tests
+        run: javascript/tests/sum.test.js
