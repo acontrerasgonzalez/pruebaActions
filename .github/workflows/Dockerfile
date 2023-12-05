@@ -1,8 +1,11 @@
-# Container image that runs your code
-FROM alpine:3.10
+# Usa una imagen base ligera de alpine
+FROM alpine:latest
 
-# Copies your code file from your action repository to the filesystem path `/` of the container
-COPY entrypoint.sh /entrypoint.sh
+# Define el directorio de trabajo dentro del contenedor
+WORKDIR /app
 
-# Code file to execute when the docker container starts up (`entrypoint.sh`)
-ENTRYPOINT ["/entrypoint.sh"]
+# Crea un archivo de texto simple con el mensaje "Hello, World!"
+RUN echo "Hello, World!" > hello.txt
+
+# Comando a ejecutar cuando el contenedor se inicie
+CMD ["cat", "hello.txt"]
