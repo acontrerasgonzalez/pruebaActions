@@ -18,6 +18,10 @@ jobs:
       - name: Print Output    
         id: output
         run: echo "hola"
+      - name: Debug
+        run: |
+          pwd
+          ls -l javascript/tests/sum.test.js
       - name: test    
         id: test
         run: javascript/src/suma.js
