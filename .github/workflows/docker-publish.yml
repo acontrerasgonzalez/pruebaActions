@@ -81,6 +81,8 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v5
         with:
+         username: ${{ secrets.DOCKER_USER }}
+         password: ${{ secrets.DOCKER_PAS }}
          push: true
          tags: adribwoy/app:latest
          file: .github/workflows/Dockerfile  # Ajusta la ruta según sea necesario
