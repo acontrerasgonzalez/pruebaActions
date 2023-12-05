@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // javascript/tests/sum.test.js
 
-test(){
+function test(){
   return true;
-}
+};
 
